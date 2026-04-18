@@ -1,0 +1,22 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	retrieve_memory(retrieve_memory)
+	process_documents(process_documents)
+	call_tools(call_tools)
+	make_decision(make_decision)
+	store_memory(store_memory)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> retrieve_memory;
+	call_tools --> make_decision;
+	make_decision --> store_memory;
+	process_documents --> call_tools;
+	retrieve_memory --> process_documents;
+	store_memory --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

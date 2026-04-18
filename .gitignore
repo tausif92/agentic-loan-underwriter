@@ -1,4 +1,8 @@
 .env
-backend/venv
+venv
 .vscode/
-backend/__pycache__/
+# Ignore Python cache folders
+__pycache__/
+
+# Ignore compiled Python files
+*.pyc
