@@ -62,7 +62,6 @@ class MemoryService:
                 }]
             )
 
-            self.client.persist()
             logger.info(f"Stored memory for {doc_id}")
 
         except Exception as e:
