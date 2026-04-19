@@ -160,8 +160,15 @@ ENV=production
 LOG_LEVEL=INFO
 EOT
 
+echo "🧹 Cleaning old containers and volumes..."
+sudo docker compose down -v --remove-orphans || true
+
+# optional but helpful if things are messy
+sudo docker system prune -f || true
+
 echo "Starting containers..."
-sudo docker-compose up -d
+
+sudo docker compose up -d --build
 
 echo "✅ Deployment complete!"
 
