@@ -152,7 +152,7 @@ LOG_LEVEL=INFO
 EOT
 
 echo "Starting containers..."
-sudo docker compose up -d
+sudo docker-compose up -d
 
 echo "✅ Deployment complete!"
 
