@@ -123,7 +123,7 @@ sudo apt update -y
 
 if ! command -v docker &> /dev/null; then
   sudo apt update -y
-  sudo apt install -y docker.io docker-compose git jq
+  sudo apt install -y docker.io docker-compose-plugin git jq
 fi
 
 
