@@ -151,6 +151,11 @@ ENV=production
 LOG_LEVEL=INFO
 EOT
 
+cat <<EOT > mcp-server/.env
+ENV=production
+LOG_LEVEL=INFO
+EOT
+
 echo "Starting containers..."
 sudo docker-compose up -d
 
