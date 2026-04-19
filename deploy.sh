@@ -143,7 +143,7 @@ git pull origin main
 
 echo "Creating .env file..."    
 
-cat <<EOT > .env
+cat <<EOT > backend/.env
 OPENAI_API_KEY=$OPENAI_API_KEY
 MCP_BASE_URL=http://mcp:8001
 CHROMA_DB_DIR=/app/data/chroma
@@ -152,7 +152,7 @@ LOG_LEVEL=INFO
 EOT
 
 echo "Starting containers..."
-sudo docker-compose up -d
+sudo docker compose up -d
 
 echo "✅ Deployment complete!"
 
